@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal developer portfolio showcasing projects, skills, and contact information." />
+  <title>Priya | Developer Portfolio</title>
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav role="navigation" aria-label="Main Navigation">
+      <h1 class="logo">Priya</h1>
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am Priya, an MCA student and aspiring web developer passionate about building secure,
+      accessible, and user-friendly web applications. I enjoy working with HTML, CSS,
+      JavaScript, and exploring cybersecurity concepts.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project-filters">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('web')">Web</button>
+      <button onclick="filterProjects('security')">Security</button>
+    </div>
+
+    <div class="projects-container">
+      <article class="project-card" data-category="web">
+        <figure>
+          <figcaption>Personal Portfolio Website</figcaption>
+        </figure>
+        <p>A responsive personal portfolio built using HTML, CSS, and JavaScript.</p>
+      </article>
+
+      <article class="project-card" data-category="security">
+        <figure>
+          <figcaption>Phishing Awareness Platform</figcaption>
+        </figure>
+        <p>An educational website to spread awareness about phishing attacks.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Responsive Design</li>
+      <li>Basic Cybersecurity</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <p id="formFeedback" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" alt="Expanded project view" />
+  </div>
+
+  <!-- JavaScript Link -->
+  <script src="script.js"></script>
+</body>
+</html>
